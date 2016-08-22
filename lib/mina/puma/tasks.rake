@@ -3,6 +3,8 @@ require 'mina/rails'
 require 'mina/puma/utility'
 
 namespace :puma do
+  include Mina::Unicorn::Utility
+
   set :web_server, :puma
 
   set_default :puma_role,      -> { user }
