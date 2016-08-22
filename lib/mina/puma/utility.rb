@@ -82,7 +82,7 @@ module Mina
           fi;
 
           echo "-----> Starting Puma...";
-          cd #{deploy_to}/#{current_path} && #{try_puma_user} #{puma_cmd} -C #{puma_config};
+          cd #{deploy_to}/#{current_path} && #{try_puma_user} #{puma_cmd} -d -C #{puma_config};
         %
       end
 
