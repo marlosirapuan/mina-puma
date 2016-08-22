@@ -82,7 +82,7 @@ module Mina
           fi;
 
           echo "-----> Starting Puma...";
-          cd #{deploy_to}/#{current_path} && #{try_puma_user} BUNDLE_GEMFILE=#{bundle_gemfile} #{puma_cmd} -c #{puma_config} -E #{puma_env} -D;
+          cd #{deploy_to}/#{current_path} && #{try_puma_user} #{puma_cmd} -C #{puma_config};
         %
       end
 
