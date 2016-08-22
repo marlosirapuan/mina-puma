@@ -1,5 +1,6 @@
 require 'mina/bundler'
 require 'mina/rails'
+require 'mina/puma/utility'
 
 namespace :puma do
   set :web_server, :puma
