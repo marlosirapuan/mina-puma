@@ -16,6 +16,7 @@ namespace :puma do
   set_default :puma_cmd,       -> { "#{bundle_prefix} puma" }
   set_default :pumactl_cmd,    -> { "#{bundle_prefix} pumactl" }
   set_default :pumactl_socket, -> { "#{deploy_to}/#{shared_path}/tmp/sockets/pumactl.sock" }
+  set_default :puma_restart_sleep_time, -> { 2 }
 
   desc "Start Puma master process"
   task start: :environment do
